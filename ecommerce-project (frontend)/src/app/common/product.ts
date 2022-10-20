@@ -1,7 +1,7 @@
 export class Product {
     sku: string;
     name: string;
-    desciption: string;
+    description: string;
     unitPrice: number;
     imageUrl: string;
     active: boolean;
