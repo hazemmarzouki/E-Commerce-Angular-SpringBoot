@@ -4,8 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './componenets/product-list/product-list.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/Product.service';
+import { Routes, RouterModule } from '@angular/router';
+
+
+/*define routes from most spesific to generic */
+const routes: Routes = [
+  { path: 'category/:id', component: ProductListComponent },
+  { path: 'category', component: ProductListComponent },
+  { path: 'products', component: ProductListComponent },
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
+  { path: '**', redirectTo: '/products', pathMatch: 'full' },
+];
+
 
 @NgModule({
   declarations: [
@@ -14,6 +26,7 @@ import { ProductService } from './services/Product.service';
 
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     HttpClientModule
   ],
