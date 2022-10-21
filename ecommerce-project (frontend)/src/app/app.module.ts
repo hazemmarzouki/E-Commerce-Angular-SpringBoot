@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './componenets/product-list/product-list.component';
-
+import {ProductCategoryMenuComponent } from './componenets/product-category-menu/product-category-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/Product.service';
 import { Routes, RouterModule } from '@angular/router';
@@ -22,8 +22,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
-
+    ProductListComponent,
+    ProductCategoryMenuComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

@@ -1,0 +1,23 @@
+a{
+    color: #666;
+}
+
+.active-link{
+    color: #f15a24;
+    font-weight: bold;
+    border-bottom: 1px solid #f15a24;
+}
+
+.category{
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.list-group-item{
+    border: none;
+    padding: 0.3rem 0.4rem 0.3rem 0rem;
+}
+
+.badge-primary{
+    background-color: #faeadb;
+    color: #F9910E
+}
