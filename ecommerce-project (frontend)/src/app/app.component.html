@@ -1,4 +1,3 @@
-
 <div class="main-navbar shadow-sm sticky-top">
     <div class="top-navbar">
         <div class="container-fluid">
@@ -6,15 +5,10 @@
                 <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
                     <h5 class="brand-name">Cart <b>Shop</b></h5>
                 </div>
+
                 <div class="col-md-5 my-auto">
-                    <form role="search">
-                        <div class="input-group">
-                            <input type="search" placeholder="Search your product" class="form-control" />
-                            <button class="btn bg-white" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </form>
+                    <app-search></app-search>
+
                 </div>
                 <div class="col-md-5 my-auto">
                     <ul class="nav justify-content-end">
@@ -34,14 +28,15 @@
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a></li>
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a>
+                                </li>
                                 <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
                                 <li>
                                     <a routerLink="/category/1" routerLinkActive="active-link">Books</a>
-                                  </li>
-                                  <li>
+                                </li>
+                                <li>
                                     <a routerLink="/category/2" routerLinkActive="active-link">Coffee Mugs</a>
-                                  </li>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -52,5 +47,5 @@
 </div>
 
 <div class="wrapper">
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>

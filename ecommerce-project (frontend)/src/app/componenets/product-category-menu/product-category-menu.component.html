@@ -1,12 +1,11 @@
 <ul class="list-group">
 
   <li *ngFor="let tempProductCategory of productCategories"
-  class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category" >
-    <a routerLink="/category/{{tempProductCategory.id}}" routerLinkActive="active-link">{{tempProductCategory.categoryName}}</a>
+    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center category">
+    <a routerLink="/category/{{tempProductCategory.id}}"
+      routerLinkActive="active-link">{{tempProductCategory.categoryName}}</a>
     <span class="badge badge-primary badge-pill">25</span>
 
   </li>
   
- 
-
 </ul>

@@ -1,0 +1,16 @@
+<form role="search">
+  <div class="input-group">
+      <input type="search" 
+      #myInput
+      placeholder="Search your product"
+      class="form-control"
+      (keyup.enter)="doSearch(myInput.value)"
+      />
+      <button
+       class="btn bg-white"
+       (click)="doSearch(myInput.value)"
+       >
+          <i class="fa fa-search"></i>
+      </button>
+  </div>
+</form>
