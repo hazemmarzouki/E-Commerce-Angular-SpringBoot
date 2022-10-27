@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="d-md-flex align-items-md-center">
-    <div class="h3">Products</div>
+    <h2>Products</h2>>
     <div class="ml-auto d-flex align-items-center views">
       <span class="btn text-#BD6000">
         <span class="fas fa-th px-md-2 px-1"></span>
@@ -15,16 +15,16 @@
     </div>
   </div>
 
-  
-<!--Menu Sidebar-->
+
+  <!--Menu Sidebar-->
   <div class="content py-md-0 py-3">
     <section id="sidebar">
       <div class="py-3">
         <h5 class="font-weight-bold">Categories</h5>
         <app-product-category-menu></app-product-category-menu>
 
-        
-   
+
+
       </div>
       <div class="py-3">
         <h5 class="font-weight-bold">Brands</h5>
@@ -114,9 +114,15 @@
           <div *ngFor="let tempProduct of products"
             class="col-lg-4 col-md-6 col-sm-10 offset-md-0 offset-sm-1 mt-3 mb-3">
             <div class="card">
-              <img class="card-img-top" src="{{tempProduct.imageUrl}}" />
+              <a routerLink="/products/{{tempProduct.id}}">
+                <img class="card-img-top" src="{{tempProduct.imageUrl}}" />
+              </a>
+
               <div class="card-body">
-                <h6 class="font-weight-bold pt-1">{{ tempProduct.name}}</h6>
+                <a routerLink="/products/{{tempProduct.id}}">
+                  <h6 class="font-weight-bold pt-1">{{ tempProduct.name}}</h6>
+                </a>
+
                 <div class="text-muted description">
                   {{ tempProduct.description}}
                 </div>
@@ -138,7 +144,8 @@
           </div>
 
 
-        <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert"> No Products Found .</div>
+          <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert"> No Products Found .
+          </div>
 
         </div>
       </div>

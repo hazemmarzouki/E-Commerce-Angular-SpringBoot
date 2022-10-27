@@ -8,6 +8,7 @@ import { SearchComponent } from './componenets/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/Product.service';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductDetailsComponent } from './componenets/product-details/product-details.component';
 
 
 /*define routes from most spesific to generic */
@@ -16,8 +17,13 @@ const routes: Routes = [
   { path: 'category/:id', component: ProductListComponent },
   { path: 'category', component: ProductListComponent },
   { path: 'products', component: ProductListComponent },
+  { path: 'products/:id', component: ProductDetailsComponent },
+
+
+
   { path: '', redirectTo: '/products', pathMatch: 'full' },
   { path: '**', redirectTo: '/products', pathMatch: 'full' },
+
 
 ];
 
@@ -27,7 +33,8 @@ const routes: Routes = [
     AppComponent,
     ProductListComponent,
     ProductCategoryMenuComponent,
-    SearchComponent
+    SearchComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
