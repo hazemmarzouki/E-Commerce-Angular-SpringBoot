@@ -40,12 +40,27 @@ export class ProductService {
 
     return this.httpClient.get<Product>(productUrl);
   }
+
+  getProductListPagination(thePage: number , 
+                           thePageSize:number , 
+                           theCartegoryId : number): Observable<GetResponseProduct> {
+    const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCartegoryId}`
+                      + `&page=${thePage}&size=${thePageSize}`;	
+
+                      return this.httpClient.get<GetResponseProduct>(searchUrl);
+                    }
 }
 
 interface GetResponseProduct {
   _embedded: {
     products: Product[];
-  };
+  },
+  page : {
+    size : number,
+    totalElem : number,
+    totalPages : number , 
+    number : number 
+  }
 }
 interface GetResponseProductCategory {
   _embedded: {
