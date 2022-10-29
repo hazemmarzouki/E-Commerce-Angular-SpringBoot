@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/Product.service';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductDetailsComponent } from './componenets/product-details/product-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 /*define routes from most spesific to generic */
@@ -39,7 +40,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     ProductService
