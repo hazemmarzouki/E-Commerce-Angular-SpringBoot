@@ -10,6 +10,7 @@ import { ProductService } from './services/Product.service';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductDetailsComponent } from './componenets/product-details/product-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CartStatusComponent } from './componenets/cart-status/cart-status.component';
 
 
 /*define routes from most spesific to generic */
@@ -36,6 +37,7 @@ const routes: Routes = [
     ProductCategoryMenuComponent,
     SearchComponent,
     ProductDetailsComponent,
+    CartStatusComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

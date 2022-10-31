@@ -136,7 +136,10 @@
                   <div class="d-flex flex-column">
                     <div class="h6 font-weight-bold">{{ tempProduct.unitPrice | currency:' Tnd'}}</div>
                   </div>
-                  <div class="btn btn-primary">Add To Cart</div>
+                  <button class="btn btn-primary" 
+                  (click)="addToCart(tempProduct)">
+                    <span class="fas fa-shopping-cart"></span>
+                  Add To Cart</button>
                 </div>
               </div>
             </div>
