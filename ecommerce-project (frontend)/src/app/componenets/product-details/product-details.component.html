@@ -5,11 +5,8 @@
 	        </div>
 	        <div class="row">
 	        	<div class="col-md-6" >
-	        	
-					
-						  	<img src="{{product.imageUrl}}" class="product-img float-right"/>
-						
-					
+	        					
+						  	<img src="{{product.imageUrl}}" class="product-img float-right"/>											
 	        	</div>
 	        	<div class="col-md-6">
 	        		<div class="product-dtl">
@@ -42,7 +39,7 @@
 							    <input type="text" name="quantity" value="1" class="qty">
 							    <div class="qtyplus">+</div>
 							</form>
-							<a href="#" class="round-black-btn">Add to Cart</a>
+							<button (click)="addToCart()" class="round-black-btn">Add to Cart</button>
               <div class="mt-5">
                 <i class="bi bi-arrow-left"></i>
               <br>Back To Product List  <a href="/products"> Click Here</a>
